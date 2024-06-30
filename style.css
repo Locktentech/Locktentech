@@ -1,0 +1,126 @@
+/*--- FLUID TYPOGRAPHY STYLES ---*/
+	.fluid-a{ /* FALLBACK */ font-size:1.05em; /* ACTUAL STYLE */ font-size:calc(1.05em + (1 - 1)*(100vw - 18.75em) / (90 - 18.75)); }
+	.fluid-p{ /* FALLBACK */ font-size:1.125em; /* ACTUAL STYLE */ font-size:calc(1.125em + (1.333 - 1.125) * (100vw - 18.75em) / (90 - 18.75)); }
+	.fluid-1{ /* FALLBACK */ font-size:1.728em; /* ACTUAL STYLE */ font-size:calc(1.602em + (3.157 - 1.602) * (100vw - 18.75em) / (90 - 18.75)); }
+	.fluid-2{ /* FALLBACK */ font-size:1.44em; /* ACTUAL STYLE */ font-size:calc(1.424em + (2.369 - 1.424)* (100vw - 18.75em) / (90 - 18.75)); }
+	.fluid-3{ /* FALLBACK */ font-size:1.2em; /* ACTUAL STYLE */ font-size:calc(1.266em + (1.777 - 1.266) * (100vw - 18.75em) / (90 - 18.75)); }
+	.fluid-4{ /* FALLBACK */ font-size:0.833em; /* ACTUAL STYLE */ font-size:calc(0.8em + (0.8 - 0.75) * (100vw - 18.75em) / (90 - 18.75)); }
+	.fluid-5{ /* FALLBACK */ font-size:0.694em; /* ACTUAL STYLE */ font-size:calc(0.64em + (0.64 - 0.563) * (100vw - 18.75em) / (90 - 18.75)); }
+	.fluid-6{ /* FALLBACK */ font-size:0.579em; /* ACTUAL STYLE */ font-size:calc(0.512em + (0.512 - 0.422) * (100vw - 18.75em) / (90 - 18.75)); }
+		@media(max-width:300px){
+			/*--- SMALLER DEVICES ---*/
+			.fluid-a{ font-size:1em; }
+			.fluid-p{ font-size:1.125em; }
+			.fluid-1{ font-size:1.602em; }
+			.fluid-2{ font-size:1.424em; }
+			.fluid-3{ font-size:1.266em; }
+			.fluid-4{ font-size:0.889em; }
+			.fluid-5{ font-size:0.79em; }
+			.fluid-6{ font-size:0.702em; }
+		}
+		@media(min-width:1440px){
+			/*--- LARGER DEVICES ---*/
+			.fluid-a{ font-size:1em; }
+			.fluid-p{ font-size:1.333em; }
+			.fluid-1{ font-size:3.157em; }
+			.fluid-2{ font-size:2.369em; }
+			.fluid-3{ font-size:1.777em; }
+			.fluid-4{ font-size:0.8em; }
+			.fluid-5{ font-size:0.563em; }
+			.fluid-6{ font-size:0.422em; }
+		}
+
+
+/*a.button { background-color: orangered; padding: 16px 30px; color: #F7F7F7; text-decoration: none; font-weight: 600;}*/
+
+
+         
+         a.button {
+            background-image: linear-gradient(to right, #fe9330 0%, #fe6630  51%, #f8273c  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            border-radius: 0px;
+            text-decoration: none;
+            font-weight: 600;
+          }
+
+          a.button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+
+
+html {scroll-behavior: smooth;}
+body {background-color: #1f1f1f; color: #F7F7F7; margin: 0px; font-family: "Fira Sans", sans-serif; font-weight: 400; font-style: normal;}
+#gradient {background-image: linear-gradient(to right, #fe9330, #ff7e2e, #fe6630, #fc4b35, #f8273c); width: 100%; min-height: 20px; position: relative;}
+#gradient-body {background-image: linear-gradient(to right, #fe9330, #ff7e2e, #fe6630, #fc4b35, #f8273c); width: 100%; min-height: 10px; position: relative; max-width: 90%;}
+
+h1, h2, h3 {margin-bottom: 10px;}
+
+
+section { padding: 20px;}
+
+header {background-color: #141414; display: flex; justify-content: center; align-items: center; padding: 20px 0px;}
+header .phone a { display: flex; justify-content: center; align-items: center; }
+header .phone a svg { padding-right: 5px; }
+header .logo { max-width: 300px; }
+header .menu { display: flex; justify-content: center;}
+header .menu a { text-decoration: none; color: #ffffff; padding: 0 20px; }
+header .phone { width: 33%; margin: 0 auto; text-align: center;}
+header .phone a {text-decoration: none; color: #ffffff;}
+header .logo { width: 33%; margin: 0 auto; text-align: center;}
+header .menu { width: 33%; margin: 0 auto; text-align: center;}
+
+@media(max-width:1024px){
+	header {flex-wrap: wrap;}
+	header .phone { width: 100%; margin: 10px auto; text-align: center;}
+	header .logo { width: 100%; margin: 10px auto; text-align: center;}
+	header .menu { width: 100%; margin: 10px auto; text-align: center;}			
+}
+
+
+section#hero {background-image: linear-gradient(to bottom, rgba(20, 20, 20, 1), rgba(20, 20, 20, .8), rgba(20, 20, 20, .2)), url(images/hero.jpg); background-size: cover; background-position: center; text-align: center; min-height: 300px; display: flex; align-items: center; justify-content: center;}
+section#hero .copy {text-transform: uppercase; }
+section#hero .copy p {margin-top: 10px; max-width: 700px; margin: 0 auto;}
+section#hero .copy p.fluid-p {text-transform: none; margin-bottom: 50px;}
+
+section#services { max-width: 1440px; margin: 0 auto;}
+section#services h1 { text-align: center; margin: 80px 0 40px; }
+section#services .service-section { display: flex; align-items: center; justify-content: center; }
+section#services .service-section.security, section#services .service-section.automation {margin: 0 0 8em;}
+section#services .service-section .image { width: 60%; }
+section#services .service-section .image img { width: 100%; height: auto; }
+section#services .service-section .copy { width: 40%; margin: 0 auto; padding: 30px;}
+section#services .service-section .copy ul {list-style-type: none; padding-left: 0px;}
+section#services .service-section .copy li { padding-bottom: 6px; }
+
+section#services .service-section.security .image { background-image: url(images/security.jpg); background-size: cover; background-position: center; min-height: 400px; }
+section#services .service-section.automation .image { background-image: url(images/automation.jpg); background-size: cover; background-position: center; min-height: 400px;}
+section#services .service-section.cameras .image { background-image: url(images/cameras.jpg); background-size: cover; background-position: center; min-height: 400px;}
+
+@media(max-width:880px){
+	section#services .service-section {flex-wrap: wrap;}
+	section#services .service-section .image { width: 100%; }
+	section#services .service-section .copy { width: 100%;}
+	section#services .service-section.automation .image {order: 1;}
+	section#services .service-section .copy {order: 2;}
+	section#services .service-section.security .image { background-image: url(images/security.jpg); background-size: cover; background-position: center; min-height: 300px; }
+	section#services .service-section.automation .image { background-image: url(images/automation.jpg); background-size: cover; background-position: center; min-height: 300px;}
+	section#services .service-section.cameras .image { background-image: url(images/cameras.jpg); background-size: cover; background-position: center; min-height: 300px;}		
+}
+
+section#about { margin: 4em auto; text-align: center; }
+section#about h1 { margin-bottom: 20px }
+section#about p { max-width: 800px; margin: 0 auto 45px; line-height: 24px;}
+
+section#contact {margin: 0 auto 8em; text-align: center;}
+section#contact h1 { margin-bottom: 20px }
+section#contact a {color: #fff; text-decoration: none;}
+section#contact .phone a { display: flex; justify-content: center; align-items: center; margin-bottom: 10px;}
+section#contact .phone a svg { padding-right: 5px; }
